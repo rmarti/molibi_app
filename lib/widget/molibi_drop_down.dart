@@ -2,11 +2,15 @@ import 'dart:math';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:molibi_app/constants/sport_type.dart';
+import 'package:molibi_app/notifiers/exercice_view_model.dart';
 import 'package:molibi_app/themes/theme_molibi.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MolibiDropDown extends StatefulWidget {
-  const MolibiDropDown({super.key});
+
+  final ExerciceViewModel model;
+
+  const MolibiDropDown({super.key, required this.model});
 
   @override
   MolibiDropDownState createState() => MolibiDropDownState();
@@ -20,12 +24,12 @@ class MolibiDropDownState extends State<MolibiDropDown> {
   String? selectedValue;
 
   @override
-void initState() {
-  super.initState();
-  if (items.isNotEmpty) {
-    selectedValue = items.first;
+  void initState() {
+    super.initState();
+    if (items.isNotEmpty) {
+      selectedValue = items.first;
+    }
   }
-}
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +74,8 @@ void initState() {
           onChanged: (value) {
             setState(() {
               selectedValue = value;
+              widget.model.sport.value = value!;
+              debugPrint("value : $value");
             });
           },
           buttonStyleData: ButtonStyleData(

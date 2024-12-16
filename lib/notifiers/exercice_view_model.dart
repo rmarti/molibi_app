@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:molibi_app/constants/sport_type.dart';
 import 'package:pedometer/pedometer.dart';
 //import 'package:geolocator/geolocator.dart';
 import 'dart:async';
@@ -18,8 +19,12 @@ class ExerciceViewModel extends ChangeNotifier {
     int stepsOnStart=0;
     double calories=0;
     double distance=0;
+    double squatCount=0;
+    String mouvement="";
     bool isRunning = false;
     bool notStart = true;
+
+    ValueNotifier<String> sport = ValueNotifier<String>(AppSportType.walking.toString());
     //final List<Position> _positionItems = <Position>[];
     //final GeolocatorPlatform _geolocatorPlatform = GeolocatorPlatform.instance;
 

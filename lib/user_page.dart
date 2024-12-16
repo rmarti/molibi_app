@@ -6,7 +6,6 @@ import 'package:molibi_app/notifiers/user_view_model.dart';
 import 'package:molibi_app/themes/theme_molibi.dart';
 import 'package:molibi_app/widget/molibi_feed_item.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class UserPage extends StatefulWidget {
 

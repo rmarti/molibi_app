@@ -97,11 +97,12 @@
   "sport_type_running":"Running",
   "sport_type_cycling":"Cycling",
   "sport_type_walking":"Walking",
-  "sport_type_bodybuilding":"Bodybuilding",
+  "sport_type_fitness":"Fitness",
   "create_exercice_save":"Save",
   "create_exercice_pause":"Pause",
   "create_exercice_start":"Start",
   "create_exercice_restart":"Restart",
-  "create_exercice_select_item":"select item"
+  "create_exercice_select_item":"select item",
+  "exercice_camera_warning":"Please note the camera is active"
     
 }

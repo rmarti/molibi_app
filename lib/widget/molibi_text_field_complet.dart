@@ -15,7 +15,7 @@ class MolibiTextFieldComplet extends StatefulWidget {
     this.obscureText = false,
     this.onSaved,
     this.controller,
-    this.validator
+    this.validator,
   });
 
   @override

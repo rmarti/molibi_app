@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:molibi_app/constants/reaction_type.dart';
 import 'package:molibi_app/models/feed_item.dart';
-import 'package:molibi_app/notifiers/user_view_model.dart';
-import 'package:provider/provider.dart';
 
 
 

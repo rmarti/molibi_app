@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:molibi_app/activity_camera.dart';
 import 'package:molibi_app/create_first_page.dart';
 import 'package:molibi_app/login_page.dart';
 import 'package:molibi_app/themes/theme_molibi.dart';
@@ -22,6 +23,12 @@ class WelcomePage extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => const LoginPage()),
+        );
+  }
+  Future<void> handleButtonCameraPress(BuildContext context) async {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ActivityCameraPage()),
         );
   }
 
@@ -121,6 +128,19 @@ class WelcomePage extends StatelessWidget {
                   ),
                                     
                         
+                  Flexible(
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0), // Added horizontal padding
+                      child: MolibiSecondaryButton(
+                        onPressed: () => handleButtonCameraPress(context),
+                        label: "test camera",
+                        backgroundColor: MolibiThemeData.molibiGrey4,
+                        pressedBackgroundColor: MolibiThemeData.molibiGreen1, 
+                      ),
+                    ),
+                  ),
+
                 ],
                 
               ),

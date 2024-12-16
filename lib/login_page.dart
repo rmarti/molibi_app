@@ -21,8 +21,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
 
   final _formKey = GlobalKey<FormState>();
-  final _emailController = TextEditingController();
-  final _passwordController = TextEditingController();
+  final _emailController = TextEditingController(text:"romain.martinez@gmail.com");
+  final _passwordController = TextEditingController(text:"aze");
 
 
   @override
@@ -45,25 +45,21 @@ class _LoginPageState extends State<LoginPage> {
                           );
                         }
                         else{
-                            debugPrint("1");
                             Provider.of<NotificationNotifier>(context, listen: false).showErrorMessage(message: AppLocalizations.of(context)!.login_connect_error,);              
                         }
                     });
                   }
                   else{
-                            debugPrint("2 $response");
                       Provider.of<NotificationNotifier>(context, listen: false).showErrorMessage(message: AppLocalizations.of(context)!.login_connect_error);              
                   }
                 });
               }
               else{
-                            debugPrint("3 : $response");
                 Provider.of<NotificationNotifier>(context, listen: false).showErrorMessage(message: AppLocalizations.of(context)!.login_connect_error);
               }
           });
         }
         else{
-                            debugPrint("4");
           Provider.of<NotificationNotifier>(context, listen: false).showErrorMessage(message: AppLocalizations.of(context)!.login_connect_error);
         }
     
